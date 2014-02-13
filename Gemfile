@@ -87,6 +87,7 @@ end
 
 group :development do
   gem 'capistrano', '~> 2.0', :require => false
+  gem 'capistrano-rbenv', :git => 'https://github.com/yyuu/capistrano-rbenv.git'
 
   # better errors
   gem 'better_errors'
@@ -95,7 +96,7 @@ group :development do
   gem 'foreman', :require => false
 
   # Use puma for development
-  gem 'puma', :require => false
+  # gem 'puma', :require => false
 
 end
 
@@ -105,7 +106,7 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'timecop'
-  gem 'coveralls', :require => false
+  # gem 'coveralls', :require => false
 end
 
 group :heroku, :production do

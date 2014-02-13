@@ -50,17 +50,6 @@ Errbit::Application.configure do
   # Set default host for ActionMailer links
   config.action_mailer.default_url_options = { :host => ENV['ERRBIT_HOST'] } if ENV['ERRBIT_HOST']
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              Errbit::Config.smtp_settings[:address],
-    port:                 Errbit::Config.smtp_settings[:port],
-    domain:               Errbit::Config.smtp_settings[:domain],
-    user_name:            Errbit::Config.smtp_settings[:user_name],
-    password:             Errbit::Config.smtp_settings[:password],
-    authentication:       'plain',
-    enable_starttls_auto: true  
-  }
-
 
   # Enable threaded mode
   # config.threadsafe!
